@@ -2,24 +2,24 @@
 
 ## Version 1.1
 
----
-
 ## Sommaire
 
-1. Introduction : philosophie du Python portable
-2. Pourquoi utiliser le Windows Embeddable Package
-3. Installation minimale de Python portable
-4. Activation du système de modules externes
-5. Installation de Pip
-6. Installation des bibliothèques Python externes
-7. Ajout manuel de Tkinter
-8. Utilisation de Visual Studio Code avec le Python portable
-9. Scripts Batch de lancement et de maintenance
-10. Création d’un lanceur `.exe` natif Windows (avec support de l'image de démarrage)
-11. Structure finale du projet
-12. Résultat et philosophie générale
+[1. Introduction : philosophie du Python portable](#section-1)  
+[2. Pourquoi utiliser le Windows Embeddable Package](#section-2)  
+[3. Installation minimale de Python portable](#section-3)  
+[4. Activation du système de modules externes](#section-4)  
+[5. Installation de Pip](#section-5)  
+[6. Installation des bibliothèques Python externes](#section-6)  
+[7. Ajout manuel de Tkinter](#section-7)  
+[8. Utilisation de Visual Studio Code avec le Python portable](#section-8)  
+[9. Scripts Batch de lancement et de maintenance](#section-9)  
+[10. Création d’un lanceur `.exe` natif Windows (avec support de l'image de démarrage)](#section-10)  
+[11. Structure finale du projet](#section-11)  
+[12. Résultat et philosophie générale](#section-12)  
 
 ---
+
+<div id="section-1"></div>
 
 ## 1. Introduction : philosophie du Python portable
 
@@ -131,6 +131,8 @@ Tout le reste est **optionnel**, selon les besoins du projet.
 
 ---
 
+<div id="section-2"></div>
+
 ## 2. Pourquoi utiliser le Windows Embeddable Package
 
 ### 2.1 Les différentes formes de Python
@@ -183,14 +185,17 @@ La version Embeddable est volontairement minimale :
 
 On ajoute uniquement ce qui est nécessaire au projet.
 
-### 2.4 Version recommandée
+<div id="section-24"></div>
+
+### 2.4 Version recommandée et compatibilité système
 
 Dans ce guide, nous utiliserons **Python 3.11.0 (64 bits)**.  
 Cette version est stable, largement compatible avec les bibliothèques courantes, et c’est celle utilisée dans l’application présentée en exemple.
 
-Compatible avec :
-
-- Windows 7, 8, 8.1, 10, 11.
+* **Historique et compatibilité du format portable :**
+* Le pack portable (*Windows Embeddable Package*) est disponible nativement à partir de la version **3.5** de Python.
+* Concernant les systèmes d'exploitation, ce guide peut être suivi dès la version **3.5** si vous ciblez encore **Windows 7** (le support officiel de Windows 7 s'arrêtant avec Python 3.8).
+* **Attention :** À partir de **Python 3.9**, Windows 7 n'est plus pris en charge par l'interpréteur. Pour utiliser **Python 3.11** (recommandé dans ce guide), la version minimale requise est **Windows 8** (ou Windows 8.1, 10, 11).
 
 Mais vous pouvez prendre d'autres versions répondant à vos besoins.
 
@@ -229,9 +234,12 @@ Cela peut provoquer :
 
 ---
 
+<div id="section-3"></div>
+
 ## 3. Installation minimale de Python portable
 
-Cette partie explique comment installer Python portable dans votre projet, en utilisant la version recommandée : **Python 3.11.0 (64 bits)**.
+Cette partie explique comment installer Python portable dans votre projet, en utilisant la version recommandée : **Python 3.11.0 (64 bits)**(compatible à partir de Windows 8)
+Pour tout choix d'une autre version selon votre système d'exploitation, référez-vous à la [section 2.4](#section-24)
 
 ### 3.1 Téléchargement de Python portable
 
@@ -355,6 +363,8 @@ Si votre projet n’a besoin que de Python standard, vous pouvez vous arrêter i
 
 ---
 
+<div id="section-4"></div>
+
 ## 4. Activation du système de modules externes
 
 Pour pouvoir utiliser Pip et des bibliothèques externes, il faut configurer le fichier :
@@ -395,6 +405,8 @@ import site
   **Essentiel** : sans cette ligne, Python reste en mode isolé, Pip ne fonctionne pas correctement et les packages ne sont pas détectés.
 
 ---
+
+<div id="section-5"></div>
 
 ## 5. Installation de Pip
 
@@ -439,6 +451,8 @@ Votre environnement peut désormais installer des bibliothèques Python.
 
 ---
 
+<div id="section-6"></div>
+
 ## 6. Installation des bibliothèques Python externes
 
 Toutes les bibliothèques doivent être installées avec :
@@ -469,6 +483,8 @@ python_env\Lib\site-packages\
 Installez uniquement les bibliothèques **nécessaires** à votre application afin de conserver un environnement portable **léger**, **rapide** et **facile à distribuer**.
 
 ---
+
+<div id="section-7"></div>
 
 ## 7. Ajouter Tkinter
 
@@ -631,6 +647,8 @@ nécessite Tkinter **déjà présent** dans l’environnement portable.
 
 ---
 
+<div id="section-8"></div>
+
 ## 8. Utilisation de Visual Studio Code avec le Python portable
 
 VS Code peut utiliser le Python portable du projet pour exécuter les scripts Python (Run, Debug, F5, bouton Play).  
@@ -695,6 +713,8 @@ Pour exécuter un script :
 ```
 
 ---
+
+<div id="section-9"></div>
 
 ## 9. Scripts Batch de lancement et de maintenance
 
@@ -779,6 +799,8 @@ pause
 - l’installe dans l’environnement portable via Pip.
 
 ---
+
+<div id="section-10"></div>
 
 ## 10. Création d’un lanceur `.exe` natif Windows (avec support de l'image de démarrage)
 
@@ -1834,6 +1856,8 @@ if __name__ == "__main__":
 
 ---
 
+<div id="section-11"></div>
+
 ## 11. Organisation recommandée de l’application portable
 
 Une structure claire facilite la maintenance et la distribution.
@@ -1884,6 +1908,8 @@ Séparer :
 - **outils de développement** (`.vscode\`).
 
 ---
+
+<div id="section-12"></div>
 
 ### 12. Résultat et philosophie générale
 
