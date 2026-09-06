@@ -835,6 +835,15 @@ Contenu :
 
 ```cpp
 // Launcher.cs
+
+// PyLibrePortable
+// Copyright (C) 2026 Binventeur-Labs
+// 
+// Ce fichier est distribué sous les termes de la
+// GNU General Public License version 3.
+// 
+// Voir le fichier LICENSE pour le texte complet de la licence.
+
 using System;
 using System.IO;
 using System.Text;
@@ -851,9 +860,17 @@ using System.Text.RegularExpressions;
 // ============================================================================
 // MÉTADONNÉES DE LA COMPILATION ET DE L'EXÉCUTABLE
 // ============================================================================
+//
+// Les paramètres ci-dessous peuvent être adaptés par l'utilisateur final
+// pour identifier son application, son entreprise, son produit et sa version.
+//
+// La mention indiquant que le lanceur est basé sur le code source
+// PyLibrePortable de Binventeur-Labs, ainsi que la référence à la GPLv3,
+// doit être conservée lors de la redistribution du code dérivé.
+// ============================================================================
 // CONFIGURATION DES PARAMÈTRES
 [assembly: AssemblyTitle("Mon Application Superbe")]                   // -> Description du fichier (Titre principal) : Indiquer le nom de l'application
-[assembly: AssemblyDescription("Lanceur portable Python .NET Native")] // -> Commentaires (Description secondaire) : Indiquer le rôle du programme
+[assembly: AssemblyDescription("Lanceur portable Python .NET Native — basé sur le code source PyLibrePortable de Binventeur-Labs, sous licence GNU GPLv3.")] // -> Commentaires (Description secondaire) : Indiquer le rôle du programme
 [assembly: AssemblyConfiguration("Release")]                           // -> Configuration interne : Règle stricte -> Mettre "Release" ou "Debug"
 [assembly: AssemblyCompany("Mon Éditeur")]                             // -> Société ou Éditeur : Indiquer l'auteur ou l'entreprise
 [assembly: AssemblyProduct("Mon Application Superbe")]                 // -> Nom du produit : Indiquer le nom global du logiciel
@@ -1225,6 +1242,15 @@ Contenu :
 
 ```bat
 :: build_launcher.bat
+
+:: PyLibrePortable
+:: Copyright (C) 2026 Binventeur-Labs
+:: 
+:: Ce fichier est distribué sous les termes de la
+:: GNU General Public License version 3.
+:: 
+:: Voir le fichier LICENSE pour le texte complet de la licence.
+
 @echo off
 chcp 65001 >nul
 setlocal enabledelayedexpansion
@@ -1435,6 +1461,16 @@ Contenu :
 ```python
 # main.py
 
+/*
+ * PyLibrePortable
+ * Copyright (C) 2026 Binventeur-Labs
+ *
+ * Ce fichier est distribué sous les termes de la
+ * GNU General Public License version 3.
+ *
+ * Voir le fichier LICENSE pour le texte complet de la licence.
+ */
+
 print("Hello World - Terminal")
 
 import os
@@ -1580,12 +1616,27 @@ Tu obtiens ainsi une solution intermédiaire :
 
 ---
 
-## 📜 Licence et Droits d'utilisation
+## 📜 Conditions de licence
 
-Ce guide (ainsi que les codes fournis à l'intérieur) fait partie du projet **PyLibrePortable**.  
-Il est distribué sous termes de la **GNU General Public License v3.0 (GPLv3)**.
+Le projet PyLibrePortable et les codes sources originaux fournis dans ce guide sont distribués sous **GNU General Public License version 3 (GPLv3)**.
 
-* **Vous êtes libres de :** Partager, utiliser et modifier ce guide et ses codes.
-* **À condition de :** Maintenir la même ouverture (open source) et de créditer l'auteur original.
+Vous êtes libre de :
 
-*© PyLibrePortable - Tous droits réservés sous licence GPLv3.*
+* utiliser le code, y compris à des fins commerciales ;
+* copier et redistribuer le code ;
+* modifier le code et créer des versions dérivées.
+
+En cas de redistribution du code ou d'une version modifiée :
+
+* les mentions de copyright et de licence doivent être conservées ;
+* les modifications doivent être clairement indiquées ;
+* le code couvert par la GPLv3 doit rester sous GPLv3 ;
+* le code source correspondant doit être fourni lorsque la GPLv3 l'exige.
+
+L'utilisation des procédures décrites dans ce guide ou d'un compilateur pour créer une application **ne place pas automatiquement le code original de cette application sous GPLv3**. Les obligations de la GPLv3 concernent le code couvert par cette licence et les œuvres qui en sont dérivées.
+
+Les logiciels tiers utilisés avec PyLibrePortable restent soumis à leurs propres licences.
+
+Pour connaître l'ensemble des conditions et obligations, consultez le fichier `LICENSE` contenant le texte complet de la GNU General Public License version 3.
+
+© 2026 Binventeur-Labs — PyLibrePortable
