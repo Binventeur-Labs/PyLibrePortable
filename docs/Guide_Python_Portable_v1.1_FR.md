@@ -1682,15 +1682,13 @@ Contenu :
 ```python
 # main.py
 
-/*
- * PyLibrePortable
- * Copyright (C) 2026 Binventeur-Labs
- *
- * Ce fichier est distribué sous les termes de la
- * GNU General Public License version 3.
- *
- * Voir le fichier LICENSE pour le texte complet de la licence.
- */
+# PyLibrePortable
+# Copyright (C) 2026 Binventeur-Labs
+#
+# Ce fichier est distribué sous les termes de la
+# GNU General Public License version 3.
+#
+# Voir le fichier LICENSE pour le texte complet de la licence.
 
 print("Hello World - Terminal")
 
