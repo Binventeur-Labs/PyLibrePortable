@@ -1864,7 +1864,6 @@ def main():
         # ====================================================================
         # SYSTÈME DE REPLI (FALLBACK) EN CAS D'ÉCHEC DE TKINTER
         # ====================================================================
-        close_splash_screen()
 
         print("[AVERTISSEMENT] Tkinter n'a pas pu s'initialiser ou s'exécuter.")
         print(env_report)
@@ -1873,6 +1872,8 @@ def main():
         # 1. Si le terminal est disponible, on y affiche le rapport
         if has_console or sys.stdout:
             try:
+                input("\nAppuyez sur Entrée pour fermer l'image de démarrage...")
+                close_splash_screen()
                 input("\nAppuyez sur Entrée pour quitter...")
                 return
             except:
